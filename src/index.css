@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:ital,opsz@1,14..32&family=Merriweather:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+  --bg-main-color:rgb(13, 7, 20);
+  --bg-todo-color:rgb(21, 16, 28);
+
+  --border-radius:10px;
+
+  --text-color-todo:rgb(158, 120, 207);
+  --text-color-input:rgb(119, 119, 119);
+  --text-color-title:rgb(255, 255, 255);
+  --text-color-done:rgb(120, 207, 176);
+
+
+
+  --input-border-color:rgb(62, 22, 113);
+
+  --button-color-hover:rgb(62, 22, 113);
+  --button-bg: rgb(158, 120, 207);
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+}

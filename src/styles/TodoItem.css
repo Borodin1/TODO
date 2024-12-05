@@ -1,0 +1,48 @@
+.todo-item{
+    width: 432px;
+    height: 75px;
+
+
+    background-color: var(--bg-todo-color);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.todo-item-button {
+    width: 100px;
+
+    display: flex;
+    justify-content: space-between;
+
+    cursor: pointer;   
+}
+
+.todo-item-button svg:hover{
+    color: var(--button-color-hover);
+}
+
+@media screen and (max-width:430px){
+    .todo-item{
+        width: 300px;
+
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+    }
+
+    .todo-item p{
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .todo-item-button{
+        margin-bottom: 10px;
+    }
+
+}

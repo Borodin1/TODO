@@ -1,0 +1,35 @@
+.todo-form{
+    margin-top: 100px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.todo-form input{
+    width: 381px;
+    height: 40px;
+    padding-left: 15px;
+
+    background-color: var(--bg-main-color);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--input-border-color);
+
+    color:var(--text-color-input);
+}
+
+.todo-form input:focus{
+    outline: none;
+}
+
+.todo-form button{
+    width: 40px;
+    margin-left: 11px;
+
+    background-color: var(--button-bg);
+    color: var(--text-color-title);
+    font-size: 0.96em;
+
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+}
