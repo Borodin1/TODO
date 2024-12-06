@@ -9,10 +9,11 @@
     color: var(--text-color-title);
 }
 
-.todo-list ul{
+.todo-list .todo-list-item{
+    height: 384px;
+    
     display: flex;
     flex-direction: column;
-    height: 384px;
     justify-content: space-evenly;
 }
 

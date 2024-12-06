@@ -4,4 +4,6 @@ body{
     font-weight: 400;
 
     background-color: var(--bg-main-color);
+
+    margin-top: 100px;
 }

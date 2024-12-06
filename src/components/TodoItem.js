@@ -1,17 +1,33 @@
 import "../styles/TodoItem.css";
 
-import { FaCheck } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
+import { useTodoItem } from "../hooks/useTodoItem";
 
-export const TodoItem = () => {
+export const TodoItem = ({ todo }) => {
+  const { title, setTitle, onClickChange, handleSaveTodo, handleDeleteTodo } =
+    useTodoItem(todo);
   return (
     <li className="todo-item">
-      <p>To do something</p>
+      {todo?.isEditing ? (
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSaveTodo(todo.id, title);
+          }}
+          className="todo-form">
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        </form>
+      ) : (
+        <p>{todo?.title}</p>
+      )}
       <div className="todo-item-button">
-        <FaCheck />
-        <MdEdit />
-        <MdDelete />
+        <MdEdit onClick={() => onClickChange(todo.id)} />
+        <MdDelete onClick={() => handleDeleteTodo(todo.id)} />
       </div>
     </li>
   );
