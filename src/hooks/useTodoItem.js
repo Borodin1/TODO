@@ -25,6 +25,21 @@ export const useTodoItem = (todo) => {
     dispatch(deleteTodo(id));
   };
 
+  const renderEditTodo = (
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleSaveTodo(todo.id, title);
+      }}
+      className="todo-form">
+      <input
+        type="text"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+    </form>
+  );
+
   return {
     title,
     setTitle,
